@@ -15,7 +15,7 @@ import Checkout from './components/ui/Checkout';
 
 function App() {
   return (
-    <Router>
+    <Router basename='/e-commerce'>
       <div>
         <Header></Header>
         <Routes>
