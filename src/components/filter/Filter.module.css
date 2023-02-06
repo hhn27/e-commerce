@@ -1,0 +1,24 @@
+/* .filter{
+    border-right: 1px solid;
+} */
+.filter button{
+    display: block;
+    margin: 0 auto;
+}
+/* .filter form input[type="checkbox"]{
+    appearance: none;
+    border: 1px solid white;
+    background-color: white;
+    width: 15px;
+    height: 15px;
+    border-radius: 0.15rem;
+    margin: 0;
+}
+.filter form input[type="radio"]{
+    appearance: none;
+    border: 1px solid white;
+    background-color: white;
+    width: 15px;
+    height: 15px;
+    margin: 0;
+} */

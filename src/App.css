@@ -1,38 +1,126 @@
-.App {
-  text-align: center;
+/* body{
+  border-top: 5px solid #be9f60;
+} */
+h1,h2,h3{
+  margin-top: 0;
+  text-transform: uppercase;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a{
+  text-decoration: none;
+  color: #000;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media only screen and (max-width: 768px) {
+  h1{
+    font-size: 25px;
+  }
+  h2{
+    font-size: 20px;
+  }
+  h3{
+    font-size: 15px;
+  }
+  p{
+    font-size: 14px;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.textCenter{
+  text-align: center;
+}
+.shadow{
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  background-color: white;
+}
+/* .primary{
+  color: #f5c566;
+} */
+/* button.primary{
+  border: 2px solid white;
+  background-color: #db9b19;
+  color: white;
+  
+} */
+button{
+  padding: 16px 24px;
+}
+button.secondary{
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+}
+button.secondary:active{
+  border: 1px solid white;
+  background-color: black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+button.primary {
+  appearance: none;
+  background-color: #000000;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  /* width: 100%; */
+  will-change: transform;
+}
+@media only screen and (max-width: 768px) {
+  button.primary{
+    font-size: 14px;
+    padding: 12px 20px;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button.primary:disabled {
+  pointer-events: none;
 }
+
+button.primary:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+button.primary:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+button.primary:focus {
+  text-decoration: none;
+}
+
+button.primary:hover {
+  text-decoration: none;
+}
+
+button.primary:active {
+  box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+  outline: 0;
+}
+
+button.primary:not([disabled]):active {
+  box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+  transform: translate(2px, 2px);
+}
+
+
+
+
+
+

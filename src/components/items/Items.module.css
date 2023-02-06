@@ -1,0 +1,14 @@
+.items{
+    display: grid;
+    grid-gap: 1%;
+    grid-template-columns: 24.25% 24.25% 24.25% 24.25%;
+}
+.items img{
+    width: 100%;
+}
+@media only screen and (max-width: 768px) {
+    .items{
+        grid-gap: 1%;
+        grid-template-columns: 32.66% 32.66% 32.66%;
+    }
+}

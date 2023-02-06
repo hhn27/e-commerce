@@ -1,0 +1,43 @@
+.signup{
+    width: 30%;
+    margin: 0 auto;
+}
+.signup form label, .signup form input{
+    display: block;
+}
+.signup form label{
+    margin-bottom: 10px;
+    color: rgb(125, 125, 125);
+}
+.signup form input{
+    border: 1px solid rgb(165, 165, 165);
+    width: 300px;
+    height: 30px;
+    width: 100%;
+}
+.signup button{
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+button:disabled, button:disabled:hover, button:disabled:active{
+    background-color: rgb(234, 234, 234);
+    color: rgb(130, 130, 130);
+    border: 1px solid rgb(234, 234, 234);
+}
+.green-alert{
+    color: rgb(61, 153, 61);
+}
+.red-alert{
+    color: rgb(153, 61, 61);
+}
+@media only screen and (max-width: 1024px) {
+    .signup{
+        width: 40%;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .signup{
+        width: 60%;
+    }
+}

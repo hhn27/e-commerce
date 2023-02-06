@@ -1,0 +1,9 @@
+.introduction{
+    width: 1200px;
+    margin: 0 auto;
+}
+@media only screen and (max-width:1200px) {
+    .introduction{
+        width: 100%;
+    }
+}

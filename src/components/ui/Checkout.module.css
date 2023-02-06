@@ -1,0 +1,50 @@
+.checkout{
+    position: relative;
+}
+.checkout form{
+    width: 30%;
+    margin: 0 auto;
+}
+.checkout form label, .checkout form input{
+    display: block;
+}
+.checkout form label{
+    margin-bottom: 10px;
+    color: rgb(125, 125, 125);
+}
+.checkout form input{
+    border: 1px solid rgb(165, 165, 165);
+    width: 300px;
+    height: 30px;
+    width: 100%;
+}
+.checkout button{
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+.thank{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #4caf4fd1;
+    color: white;
+    transition: all 500ms;
+    height: 50px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+}
+@media only screen and (max-width: 1024px) {
+    .checkout form{
+        width: 40%;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .checkout form{
+        width: 60%;
+    }
+}
+

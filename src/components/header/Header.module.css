@@ -1,0 +1,152 @@
+.relative{
+    position: relative;
+}
+/* .header{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+} */
+.banner img{
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+.logo{
+    width: 80px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 2rem;
+}
+ul{
+    list-style-type:none;
+  }
+li a{
+    text-decoration: none;
+    text-transform: uppercase;
+}
+nav{
+    padding: 15px 0;
+    /* display: grid; */
+    width: 1200px;
+    margin: 0 auto;
+    /* grid-template-columns: 30% 60% auto ; */
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav li a{
+    color: rgb(124, 124, 124) ;
+    /* text-align: center; */
+    font-size: 16px;
+}
+li .active{
+    color: rgba(0,91,170,255);
+}
+.navLinks{
+    padding-left: 0;
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-bottom: 0; */
+}
+.navLinksMobile{
+    display: none;
+}
+/* .navRight{
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+} */
+nav button{
+    padding: 2px 10px;
+    border: none;
+    border-radius: 2rem;
+}
+.toggleBtn{
+    display: none;
+}
+.form{
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+}
+.form input{
+    height: 25px;
+    width: 200px;
+    border: 2px solid rgb(187, 187, 187);
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.form button{
+    background-color: white;
+    padding: 0;
+}
+
+@media only screen and (max-width:1200px) {
+    nav{
+        width: 100%;
+    }
+}
+@media only screen and (max-width:1024px) {
+    nav li a{
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .navRight{
+        width: 50%;
+    }
+    .toggleBtn{
+        display: block;
+    }
+    .navLinks{
+        display: none;
+    }
+    .navLinksMobile{
+        display: block;
+        background-color: rgb(50, 50, 50);
+        position: fixed;
+        flex-direction: column;
+        justify-content: flex-start;
+        top: 0;
+        left: 0;
+        z-index: 15;
+        width: 30%;
+        height: 100%;
+        padding: 0 15px;
+        margin-top: 0;
+        transition: all 500ms;
+    }
+
+    .navLinksMobile li{
+        padding: 20px 0;
+    }
+    .navLinksMobile a{
+        color: white;
+    }
+}
+
+.items{
+    position: relative;
+}
+.itemCategories{
+    position: absolute;
+    border-radius: 3px;
+    width: 160%;
+    opacity: 0;
+}
+.items:hover .medicalServiceCategory{
+    height: 300px;
+    overflow-y: scroll;
+    opacity: 1;
+    transition: opacity 500ms;
+    z-index: 2;
+}
+/* .link-title{
+    margin-bottom: 30px;
+} */

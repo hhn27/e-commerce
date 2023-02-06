@@ -1,0 +1,21 @@
+.search-container{
+    width: 1200px;
+    margin: 0 auto;
+}
+.items{
+    display: grid;
+    grid-gap: 1%;
+    grid-template-columns: 33% 33% 33%;
+}
+.items img{
+    width: 100%;
+}
+.search-grid{
+    display: grid;
+    grid-gap: 4%;
+    grid-template-columns: 20% auto;
+}
+.filter-header{
+    display: flex;
+    align-items: center;
+}
