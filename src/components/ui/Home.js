@@ -44,8 +44,10 @@ const Home =() =>{
                 <div className={classes.collectionRightSide}>
                     <img src={collectionBanner1} className={classes.crs1} alt='collection'></img>
                     <img src={collectionBanner3} className={classes.crs2} alt='collection'></img>
+                    <div>
                     <h2> Collection mới nhất đang được mở bán </h2>
                     <button className="primary"> Xem ngay </button>
+                    </div>
                 </div>
             </div>
             <div className={classes['featured-items-container']}> 

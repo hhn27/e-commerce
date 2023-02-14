@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import classes from './Login.module.css'
 import {signInWithEmailAndPassword, onAuthStateChanged} from 'firebase/auth'
 import { auth } from "../../firebase-config";
@@ -14,6 +14,7 @@ const Login = () => {
         setPassword(e.target.value)
     }
     const navigate = useNavigate()
+    const [style, setStyle] = useState({display: 'none'})
     const signinHandler = async (e) =>{
         e.preventDefault()
         try{
@@ -22,13 +23,21 @@ const Login = () => {
                 email,
                 password
             );
-            console.log(user)
+            navigate('/', {replace:true})
         }
         catch (error) {
             console.log(error.message)
+            setStyle({display: 'block'})
         }
-        navigate('/', {replace:true})
     }
+    // const loginSuccess = () => {
+    //     if(!user.email){
+    //         setStyle({display: 'block'})
+    //     }
+    //     else{
+    //         useCallback(() => navigate('/', {replace:true}), [navigate])
+    //     }
+    // }
 
     return(
         <div className={classes.login}>
@@ -38,8 +47,9 @@ const Login = () => {
                 <input type="email" name='username' id='username' required onChange={emailHandler}></input>
                 <label htmlFor="password"> Mật khẩu </label> 
                 <input type="password" name="pass" id="password" required onChange={passwordHandler}></input>
+                <b><p style={style}> Tên đăng nhập hoặc mật khẩu sai !</p></b>
                 <button className="primary"> Đăng nhập </button>
-                <span> Bạn chưa có tài khoản? {` `}</span><Link to="/dangky"> Nhấn vào đây để đăng ký</Link>
+                <span> Bạn chưa có tài khoản? {` `}</span><Link to="/dangky"> <u> Nhấn vào đây để đăng ký </u> </Link>
             </form>
         </div>
     )

@@ -18,6 +18,8 @@ const Header = () => {
     const [linkActive, setLinkActive] = useState(0);
     const handelLinkClick = (linkIndex) => {
       setLinkActive(linkIndex);
+      if(sidebarIsOpen)
+        setSidebarIsOpen(!sidebarIsOpen)
     }
     const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
     const openSidebar = () => {
@@ -48,14 +50,10 @@ const Header = () => {
 
     return(
       <div className={classes.relative}>
-        {/* <div className={classes.banner}>
-                <img src={banner} alt='banner'></img>
-        </div> */}
         <nav className={classes.header}>
             <div>
-              <Link to="/" className={linkActive===1 ? classes.active : null} onClick={() => handelLinkClick(1)}> <img className={classes.logo} src={logo} alt='logo'></img> </Link>
+              <Link to="/" onClick={() => handelLinkClick(1)}> <img className={classes.logo} src={logo} alt='logo'></img> </Link>
             </div>
-            {/* <div className={classes.navRight}> */}
             <form className={classes.form} onSubmit={searchHandler}>
               <input className="shadow" type="text" id="search" name="search" ref={searchRef}></input>
               <button> <SearchIcon sx={{color: colors, fontSize: 30}}></SearchIcon> </button>
@@ -89,23 +87,23 @@ const Header = () => {
                   </li>
                   <li className={classes.items}>
                     <Link to="/sanpham" className={linkActive===3 ? classes.active : null} onClick={() => handelLinkClick(3)}> Sản phẩm </Link>
-                    <article className={classes.itemCategories}>
+                    {/* <article className={classes.itemCategories}>
                       {itemCategories.map((itemCategory) => {
                         return(
                             <div key={itemCategory.id}>
-                                <Link to={`/cacgoidichvuyte/${itemCategory.id}`} > <p> {itemCategory.name} </p> </Link>
+                                <Link to={`/sanpham/${itemCategory.id}`} > <p> {itemCategory.name} </p> </Link>
                             </div>
                         );
                       })}
-                    </article> 
+                    </article>  */}
                   </li>
                   <li>
-                    <Link to="/taikhoan" className={linkActive===4 ? classes.active : null} onClick={() => handelLinkClick(4)}>Tài khoản </Link>
+                    <Link to="/dangnhap" className={linkActive===4 ? classes.active : null} onClick={() => handelLinkClick(4)}> Đăng nhập </Link>
                   </li>
               </ul>
             
               <div>
-                <Link to="/giohang"> 
+                <Link to="/giohang" onClick={() => handelLinkClick(5)}> 
                   <Badge badgeContent={amount} sx={{
                                                 "& .MuiBadge-badge": {
                                                   color: "white",

@@ -4,9 +4,10 @@ import { useGlobalContext } from "../../context";
 import classes from './ItemDetail.module.css'
 import parse from 'html-react-parser';
 import ItemsSlider from "../items/ItemsSlider";
+import axios from "axios";
 
 const ItemDetail = () => {
-    const {items, add, user} = useGlobalContext()
+    const {items, add, user, cartItems} = useGlobalContext()
     const {itemId} = useParams()
     let item = {}
     let index 
@@ -53,14 +54,46 @@ const ItemDetail = () => {
         if(quantity>1)
             setQuantity(quantity-1)
     }
-    async function addToCartByUser (cartItem) {
-        const response = await fetch('https://e-commerce-fda6a-default-rtdb.firebaseio.com/cart.json', {
-            method: 'POST',
-            body: JSON.stringify(cartItem),
-            headers: {
-                'Content-Type' : 'application/json'
+    const check = (cartItem) => {
+        let key
+        cartItems.map((cartIte) => {
+            if(cartIte.id === cartItem.id && cartIte.size === cartItem.size){
+                key = cartIte.key
             }
         })
+        return key 
+    }
+    async function addToCartByUser (cartItem) {
+        if(check(cartItem)){
+            console.log(check(cartItem))
+            try {
+                const response = await axios.put(
+                    `https://e-commerce-fda6a-default-rtdb.firebaseio.com/cart/${check(cartItem)}.json`,
+                    {
+                        userId: cartItem.userId,
+                        id: cartItem.id,
+                        name: cartItem.name,
+                        photo: cartItem.photo,
+                        amount: cartItem.amount+1,
+                        price: cartItem.price,
+                        size: cartItem.size
+                    }
+                );
+                // console.log(response.status);
+                // console.log(response.data);
+            } catch (e) {
+                console.log('something went wrong :(', e);
+            }
+        }
+        else{
+            const response = await fetch('https://e-commerce-fda6a-default-rtdb.firebaseio.com/cart.json', {
+                method: 'POST',
+                body: JSON.stringify(cartItem),
+                headers: {
+                    'Content-Type' : 'application/json'
+                }
+            })
+        }
     }
     const addToCart = () => {
         if(selectedSize && item.size[selectedSize].quantity>0){

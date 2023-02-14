@@ -12,12 +12,12 @@ const Items = ({items}) => {
                             <img src={item.photo[0]}></img>
                         </div>
                         <Link to={`/sanpham/masanpham/${item.id}`}> 
-                            <p className="textCenter"> 
+                            <b><p className="textCenter"> 
                                 {item.name}
-                            </p>
+                            </p></b>
                         </Link>
                         <p className="textCenter">
-                            {item.price}
+                            {item.price.toLocaleString()}
                         </p>
                     </div>
                 )

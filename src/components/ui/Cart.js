@@ -25,7 +25,6 @@ const Cart = () => {
             const response = await axios.put(
                 `https://e-commerce-fda6a-default-rtdb.firebaseio.com/cart/${key}.json`,
                 {
-                    key: itemIncre.key,
                     userId: itemIncre.userId,
                     id: itemIncre.id,
                     name: itemIncre.name,
@@ -48,7 +47,6 @@ const Cart = () => {
             const response = await axios.put(
                 `https://e-commerce-fda6a-default-rtdb.firebaseio.com/cart/${key}.json`,
                 {
-                    key: itemIncre.key,
                     userId: itemIncre.userId,
                     id: itemIncre.id,
                     name: itemIncre.name,
@@ -94,7 +92,7 @@ const Cart = () => {
             <div className={classes['cart-items']}>
                 {cartItems.map((item) =>{ 
                     return(
-                    <div key={item.id} className={classes['cart-item']}>
+                    <div className={classes['cart-item']}>
                         <div className={classes['cart-item-info']}>
                             <img src={item.photo}></img>
                             <div>

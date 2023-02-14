@@ -90,7 +90,9 @@ const AppProvider = ({children}) => {
             }
             else{
                 const cart = localStorage.getItem("cart")
-                cartDisplay(JSON.parse(cart))
+                if(cart){
+                    cartDisplay(JSON.parse(cart))
+                }
             }
             }
         )

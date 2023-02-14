@@ -28,18 +28,18 @@ const Filter = ({path}) => {
                 <span> Lọc </span>
             </div> */}
             <form >
-                <label for="category"> <b> Chọn loại hàng </b> </label><br></br>
+                <label> <b> Chọn loại hàng </b> </label><br></br>
                 <input type="checkbox" id="category1" value="0" name="category1" onChange={categoryHandler}></input>
-                <label for="top"> Áo </label><br></br>
+                <label htmlFor="category1"> Áo </label><br></br>
                 <input type="checkbox" id="category2" value="1" name="category2" onChange={categoryHandler}></input>
-                <label for="bottom"> Quần </label><br></br>
+                <label htmlFor="category2"> Quần </label><br></br>
                 <input type="checkbox" id="category3" value="2" name="category3" onChange={categoryHandler}></input>
-                <label for="acessory"> Phụ kiện</label><br></br>
-                <label for="price"> <b> Chọn khoảng giá </b> </label><br></br>
+                <label htmlFor="category3"> Phụ kiện</label><br></br>
+                <label> <b> Chọn khoảng giá </b> </label><br></br>
                 <input type="radio" id="priceRange1" name="priceRange" value="<500000" onChange={priceHandler}></input>
-                <label for="priceRange1"> {`<500.000`} </label><br></br>
+                <label htmlFor="priceRange1"> {`<500.000`} </label><br></br>
                 <input type="radio" id="priceRange2" name="priceRange" value=">=500000" onChange={priceHandler}></input>
-                <label for="priceRange2"> {`>=500.000`} </label><br></br>
+                <label htmlFor="priceRange2"> {`>=500.000`} </label><br></br>
                 <Link to={`/${path}/${category}/${filteredPrice}`}><button className="primary"> Lọc </button> </Link>
             </form>
         </div>

@@ -2,14 +2,6 @@
     width: 1200px;
     margin: 0 auto;
 }
-.items{
-    display: grid;
-    grid-gap: 1%;
-    grid-template-columns: 33% 33% 33%;
-}
-.items img{
-    width: 100%;
-}
 .search-grid{
     display: grid;
     grid-gap: 4%;
@@ -18,4 +10,14 @@
 .filter-header{
     display: flex;
     align-items: center;
+}
+@media only screen and (max-width: 1200px) {
+    .search-container{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .search-grid{
+        grid-template-columns: 100%;
+    }
 }

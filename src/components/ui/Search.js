@@ -6,6 +6,7 @@ import FilterAltOutlinedIcon from '@mui/icons-material/FilterAltOutlined';
 import Filter from "../filter/Filter";
 import Items from "../items/Items";
 import TuneIcon from '@mui/icons-material/Tune';
+import { padding } from "@mui/system";
 
 const Search = () => {
     const cat = ['Áo', 'Quần', 'Phụ kiện']
@@ -16,6 +17,7 @@ const Search = () => {
     
     // const [filteredPrice, setFilteredPrice] = useState('')
     let searchedItems = items.filter(item => item.name.includes(input))
+    console.log(searchedItems)
     if(category){
         const catList = category.split(',').map(Number);
         console.log(catList)
@@ -48,7 +50,10 @@ const Search = () => {
                     </div>
                     <Filter path= {`search/${input}`}></Filter>
                 </div>
-                <Items items={searchedItems}></Items>
+                {searchedItems.length>0? 
+                    <Items items={searchedItems}></Items> :
+                    <p style={{margin: '0px'}}> Không tìm thấy sản phẩm nào </p>
+                }
             </div>
         </div>
     )
