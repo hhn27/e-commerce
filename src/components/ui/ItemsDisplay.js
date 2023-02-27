@@ -50,7 +50,7 @@ const ItemsDisplay = () => {
 
     return(
         <div className={classes["items-display"]}>
-            <h2> Kết quả tìm kiếm </h2>
+            <h2 className="textCenter"> Sản phẩm </h2>
             <div className={classes['filter-container']}>
                 <button onClick={filterHandler} className={classes['filter-header']}>
                     <TuneIcon></TuneIcon>

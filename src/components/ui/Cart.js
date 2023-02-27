@@ -86,7 +86,7 @@ const Cart = () => {
     }
     return(
         <div className={classes.cart}>
-            <h2> Giỏ hàng của bạn </h2>
+            <h2 className="textCenter"> Giỏ hàng của bạn </h2>
             {cartItems.length>0 &&
             <>
             <div className={classes['cart-items']}>

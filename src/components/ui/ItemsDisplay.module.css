@@ -2,6 +2,7 @@
     width: 1200px;
     margin: 0 auto;
 }
+
 @media only screen and (max-width: 1200px) {
     .items-display{
         width: 100%;
@@ -17,6 +18,13 @@
     background-color: white;
     border-radius: 2px;
 }
+
+@media only screen and (max-width: 1232px) {
+    .filter-header{
+        margin-left: 16px;
+    }
+}
+
 .filter-relative{
     position: relative;
 }

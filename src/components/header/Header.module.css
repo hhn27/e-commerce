@@ -19,8 +19,6 @@ nav{
     /* display: grid; */
     width: 1200px;
     margin: 0 auto;
-    /* grid-template-columns: 30% 60% auto ; */
-    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -74,8 +72,40 @@ nav button{
     background-color: white;
     padding: 0;
 }
-
-@media only screen and (max-width:1200px) {
+.seachBtn{
+    display: none;
+}
+.search-mobile{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 5;
+    visibility: hidden;
+}
+.search-flex{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.search-flex form{
+    display: flex;
+    align-items: center;
+}
+.search-flex form input{
+    height: 25px;
+    width: 250px;
+    border: 2px solid rgb(187, 187, 187);
+    border-radius: 5px;
+    margin: 0 5px;
+}
+@media only screen and (max-width:1232px) {
+    .relative{
+        padding-left: 16px;
+        padding-right: 16px;
+    }
     nav{
         width: 100%;
     }
@@ -90,10 +120,16 @@ nav button{
     .navRight{
         width: 50%;
     }
+    .seachBtn{
+        display: block;
+    }
     .toggleBtn{
         display: block;
     }
     .navLinks{
+        display: none;
+    }
+    .form{
         display: none;
     }
     .navLinksMobile{
@@ -111,12 +147,14 @@ nav button{
         margin-top: 0;
         transition: all 500ms;
     }
-
     .navLinksMobile li{
         padding: 20px 0;
     }
     .navLinksMobile a{
         color: white;
+    }
+    .search-mobile{
+        visibility: visible;
     }
 }
 @media only screen and (max-width:600px) {

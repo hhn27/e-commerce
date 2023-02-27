@@ -51,7 +51,7 @@ const Home =() =>{
                 </div>
             </div>
             <div className={classes['featured-items-container']}> 
-                <h2 > Sản phẩm nổi bật </h2>
+                <h2 className="textCenter"> Sản phẩm nổi bật </h2>
                 <ItemsSlider items={items}></ItemsSlider>
             </div>
             <div className={classes.categories}>

@@ -42,7 +42,7 @@ const Login = () => {
     return(
         <div className={classes.login}>
             <form onSubmit={signinHandler}>
-            <h2> Đăng nhập </h2>
+            <h2 className="textCenter"> Đăng nhập </h2>
                 <label htmlFor="username"> Tên đăng nhập </label> 
                 <input type="email" name='username' id='username' required onChange={emailHandler}></input>
                 <label htmlFor="password"> Mật khẩu </label> 

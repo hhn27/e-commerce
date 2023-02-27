@@ -2,8 +2,11 @@
     width: 1200px;
     margin: 0 auto;
 }
-@media only screen and (max-width:1200px) {
+@media only screen and (max-width:1232px) {
     .introduction{
         width: 100%;
+    }
+    .info{
+        padding: 0 16px;
     }
 }

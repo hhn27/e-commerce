@@ -25,7 +25,7 @@ const Introduction = () => {
         return(
             <div className={classes.introduction}>
                 <h2 className="textCenter"> Về chúng tôi </h2>
-                {parse(introduction)}
+                <div className={classes.info}> {parse(introduction)} </div>
             </div>
         )
     }
